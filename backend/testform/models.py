@@ -13,7 +13,8 @@ class M33er(models.Model):
 
     alias = models.CharField(
         max_length=16,
-        validators=[RegexValidator(r'^[a-z]+$')]
+        validators=[RegexValidator(r'^[a-z]+$')],
+        unique=True
     )
     arrival_date = models.DateField()
     startup = models.CharField(max_length=10, choices=STARTUP_CHOICES)
