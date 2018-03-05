@@ -1,0 +1,16 @@
+{
+  "name": "drfrf",
+  "version": "0.0.1",
+  "description": "Django REST framework - redux-form connector",
+  "main": "index.js",
+  "author": "Theodo <contact@theodo.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "redux-form": "^7.3.0"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1"
+  }
+}
