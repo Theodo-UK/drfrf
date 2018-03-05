@@ -1,5 +1,5 @@
 FROM python:3.6
-ENV PYTHONPATH /code:/drfrf
+ENV PYTHONPATH /code:/libs
 ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 
