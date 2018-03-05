@@ -1,0 +1,10 @@
+version: '3.1'
+
+services:
+  backend:
+    build: ./backend
+    command: python /code/manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/code
+    ports:
+      - "8000:8000"
