@@ -9,6 +9,7 @@ name = "pypi"
 
 django = "*"
 pytz = "*"
+djangorestframework = "*"
 
 
 [dev-packages]
