@@ -7,6 +7,8 @@
   - Refactor
   - Put it on a separate git repo
   - Try to install it on Mi Casa
+  - Ask the Admiral teams if they'd be interested
+  - Chase Ben
 - [ ] Improve the JS API: use a HOC?
 - [ ] Make it easier to install
   - Re-organize the repo so that we can add it as a dependency in `package.json` and `requirements.txt`/`Pipfile`
