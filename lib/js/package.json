@@ -6,7 +6,7 @@
   "author": "Theodo <contact@theodo.co.uk>",
   "license": "MIT",
   "dependencies": {
-    "redux-form": "^7.3.0"
+    "recompose": "^0.30.0"
   },
   "peerDependencies": {},
   "devDependencies": {

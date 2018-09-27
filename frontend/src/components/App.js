@@ -1,5 +1,6 @@
 import React from 'react'
-import { Field } from 'redux-form'
+import { Field, reduxForm } from 'redux-form'
+import { compose } from "recompose"
 
 import drfrf from '@drfrf'
 
@@ -47,11 +48,12 @@ const App = props => {
   </form>
 }
 
-export default drfrf({
-  form: 'drfrf_test',
-  asyncChangeFields: ['alias', 'arrival_date', 'startup'],
-  drfrf: {
-    submitEndpoint: 'http://localhost:8000/api/m33ers/',
-    validationEndpoint: 'http://localhost:8000/api/m33ers/validate/'
-  }
-})(App)
+export default compose(
+  drfrf({
+    endpoint: "http://localhost:8000/api/m33ers/validate/"
+  }),
+  reduxForm({
+    form: 'drfrf_test',
+    asyncChangeFields: ['alias', 'arrival_date', 'startup'],
+  })
+)(App)
