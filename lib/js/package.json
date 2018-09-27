@@ -5,12 +5,16 @@
   "main": "index.js",
   "author": "Theodo <contact@theodo.co.uk>",
   "license": "MIT",
-  "dependencies": {
+  "scripts": {
+    "build": "rollup --config"
+  },
+  "peerDependencies": {
     "recompose": "^0.30.0"
   },
-  "peerDependencies": {},
   "devDependencies": {
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-3": "^6.24.1"
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "rollup": "^0.66.2",
+    "rollup-plugin-babel": "^4.0.3"
   }
 }
