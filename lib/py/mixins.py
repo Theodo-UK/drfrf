@@ -3,7 +3,18 @@ from rest_framework.decorators import detail_route, list_route
 from rest_framework.response import Response
 
 
-class ValidateMixin(object):
+class ValidateCreateMixin(object):
+    validate_url_path = 'validate'
+
+    @list_route(methods=['post'], url_path=validate_url_path)
+    def validate_create(self, request):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        return Response({}, status=status.HTTP_200_OK)
+
+
+class ValidateUpdateMixin(object):
     validate_url_path = 'validate'
 
     @detail_route(methods=['put', 'patch'], url_path=validate_url_path)
@@ -15,13 +26,6 @@ class ValidateMixin(object):
             data=request.data,
             partial=partial
         )
-        serializer.is_valid(raise_exception=True)
-
-        return Response({}, status=status.HTTP_200_OK)
-
-    @list_route(methods=['post'], url_path=validate_url_path)
-    def validate_create(self, request):
-        serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
         return Response({}, status=status.HTTP_200_OK)
