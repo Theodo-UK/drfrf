@@ -39,8 +39,59 @@ jobs:
             - ~/.yarn
             - ~/drfrf/lib/js/node_modules
 
+  back:
+    working_directory: ~/drfrf
+
+    docker:
+      - image: python:3.7
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - back-v1-{{ .Branch }}-{{ checksum "lib/py/Pipfile.lock" }}
+            - back-v1-{{ .Branch }}
+            - back-v1-master-{{ checksum "lib/py/Pipfile.lock" }}
+            - back-v1-master
+
+      - run:
+          name: Install system dependencies
+          command: pip install pipenv
+
+      - run:
+          name: Install unreleased dependencies (TEMPORARY)
+          working_directory: lib/py
+          command: pipenv install --dev --skip-lock black
+
+      - run:
+          name: Check for security vulnerabilities
+          working_directory: lib/py
+          command: pipenv check
+
+      - run:
+          name: Check code style
+          working_directory: lib/py
+          command: pipenv run flake8 .
+
+      - run:
+          name: Check format
+          working_directory: lib/py
+          command: pipenv run black --diff --check .
+
+      - run:
+          name: Check imports order
+          working_directory: lib/py
+          command: pipenv run isort --check-only --recursive --diff .
+
+      - save_cache:
+          key: back-v1-{{ .Branch }}-{{ checksum "lib/py/Pipfile.lock" }}
+          paths:
+            - ~/.cache/pip
+
 workflows:
   version: 2
   stack:
     jobs:
       - front
+      - back
