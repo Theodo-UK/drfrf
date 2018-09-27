@@ -1,0 +1,46 @@
+version: 2
+
+jobs:
+  front:
+    working_directory: ~/drfrf
+
+    docker:
+      - image: node:10
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - front-v1-{{ .Branch }}-{{ checksum "lib/js/yarn.lock" }}
+            - front-v1-{{ .Branch }}
+            - front-v1-master-{{ checksum "lib/js/yarn.lock" }}
+            - front-v1-master
+
+      - run:
+          name: Install dependencies
+          working_directory: lib/js
+          command: yarn
+
+      - run:
+          name: Check lockfile is up-to-date
+          working_directory: lib/js
+          command: yarn check
+
+      - run:
+          name: Run tests
+          working_directory: lib/js
+          command: yarn test
+
+      - save_cache:
+          key: front-v1-{{ .Branch }}-{{ checksum "lib/js/yarn.lock" }}
+          paths:
+            - ~/.config/yarn
+            - ~/.yarn
+            - ~/drfrf/lib/js/node_modules
+
+workflows:
+  version: 2
+  stack:
+    jobs:
+      - front
