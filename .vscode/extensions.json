@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "bungcip.better-toml",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "Orta.vscode-jest"
+  ]
+}
