@@ -45,6 +45,9 @@ jobs:
     docker:
       - image: python:3.7
 
+    environment:
+      DJANGO_SETTINGS_MODULE: tests.settings
+
     steps:
       - checkout
 
@@ -83,6 +86,11 @@ jobs:
           name: Check imports order
           working_directory: lib/py
           command: pipenv run isort --check-only --recursive --diff .
+
+      - run:
+          name: Run unit tests
+          working_directory: lib/py
+          command: pipenv run green -r
 
       - save_cache:
           key: back-v1-{{ .Branch }}-{{ checksum "lib/py/Pipfile.lock" }}
