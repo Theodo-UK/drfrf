@@ -1,16 +1,13 @@
-const webpack = require('webpack')
+const webpack = require("webpack")
 
-const baseConfig = require('./webpack.config.js')
+const baseConfig = require("./webpack.config.js")
 
 module.exports = {
   ...baseConfig,
-  plugins: [
-    new webpack.NamedModulesPlugin()
-  ],
-  devtool: 'eval-source-map',
+  plugins: [new webpack.NamedModulesPlugin()],
+  devtool: "eval-source-map",
   devServer: {
-    contentBase: './dist',
+    contentBase: "./dist",
     historyApiFallback: true,
-    hot: true
-  }
+  },
 }
