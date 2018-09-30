@@ -6,4 +6,4 @@ publish-js:
 	cd lib/js && npm publish
 
 publish-py:
-	cd lib/py && python setup.py register sdist upload
+	cd lib/py && pipenv run build && pipenv run publish

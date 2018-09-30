@@ -3,6 +3,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
+[scripts]
+build = "python setup.py sdist bdist_wheel"
+publish = "twine upload dist/*"
+
 [packages]
 
 [dev-packages]
@@ -11,6 +15,9 @@ isort = {version = "*", extras = ["pipfile"]}
 green = "*"
 djangorestframework = "*"
 django = "*"
+setuptools = "*"
+twine = "*"
+wheel = "*"
 
 [requires]
 python_version = "3.7"

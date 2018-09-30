@@ -1,9 +1,18 @@
+import os
+
 from setuptools import find_packages, setup
+
+
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
 
 setup(
     name="drfrf",
     version="0.0.1",
     description="Django REST framework - redux-form connector",
+    long_description=read("README.md"),
+    long_description_content_type="text/markdown",
     author="Theodo",
     author_email="contact@theodo.co.uk",
     classifiers=[

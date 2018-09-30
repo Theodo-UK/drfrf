@@ -1,5 +1,6 @@
 .coverage
 *.pyc
 __pycache__
+build
 dist
 drfrf.egg-info
