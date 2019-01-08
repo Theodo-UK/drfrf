@@ -5,7 +5,17 @@
   "main": "dist/index.js",
   "author": "Theodo <contact@theodo.co.uk>",
   "license": "MIT",
-  "keywords": ["drfrf", "django", "django-rest-framework", "drf", "redux", "redux-form", "connector", "form", "validation"],
+  "keywords": [
+    "drfrf",
+    "django",
+    "django-rest-framework",
+    "drf",
+    "redux",
+    "redux-form",
+    "connector",
+    "form",
+    "validation"
+  ],
   "scripts": {
     "build": "yarn clean && rollup --config",
     "clean": "rimraf dist",
