@@ -1,6 +1,6 @@
 {
   "name": "drfrf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Django REST framework - redux-form connector",
   "main": "dist/index.js",
   "author": "Theodo <contact@theodo.co.uk>",
