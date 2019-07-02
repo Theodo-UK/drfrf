@@ -116,11 +116,11 @@
         },
         "django": {
             "hashes": [
-                "sha256:753d30d3eb078064d2ddadfea65083c9848074a7f93d7b4dc7fa6b1380d278f5",
-                "sha256:7cb67e8b934fab23b6daed7144da52e8a25a47eba7f360ca43d2b448506b01ad"
+                "sha256:4d23f61b26892bac785f07401bc38cbf8fa4cec993f400e9cd9ddf28fd51c0ea",
+                "sha256:6e974d4b57e3b29e4882b244d40171d6a75202ab8d2402b8e8adbd182e25cf0c"
             ],
             "index": "pypi",
-            "version": "==2.2.2"
+            "version": "==2.2.3"
         },
         "djangorestframework": {
             "hashes": [
@@ -364,10 +364,10 @@
         },
         "tomlkit": {
             "hashes": [
-                "sha256:d6506342615d051bc961f70bfcfa3d29b6616cc08a3ddfd4bc24196f16fd4ec2",
-                "sha256:f077456d35303e7908cc233b340f71e0bec96f63429997f38ca9272b7d64029e"
+                "sha256:a8d806f3a453c2d292afe97918398354e405b93919e2e68771a3fd0a90e89576",
+                "sha256:c6b0c11b85e888c12330c7605d43c1446aa148cd421163f90ca46ea813f2c336"
             ],
-            "version": "==0.5.3"
+            "version": "==0.5.5"
         },
         "tqdm": {
             "hashes": [
