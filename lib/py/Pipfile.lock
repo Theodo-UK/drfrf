@@ -124,11 +124,11 @@
         },
         "djangorestframework": {
             "hashes": [
-                "sha256:376f4b50340a46c15ae15ddd0c853085f4e66058f97e4dbe7d43ed62f5e60651",
-                "sha256:c12869cfd83c33d579b17b3cb28a2ae7322a53c3ce85580c2a2ebe4e3f56c4fb"
+                "sha256:1f274ebbb930dfa709751fac31b2332b2e662303f8c66d7eacea534702611e34",
+                "sha256:bd389598d052fb79a68904eff35d34303118b5c2abefa65329b5f1a07b571ce1"
             ],
             "index": "pypi",
-            "version": "==3.9.4"
+            "version": "==3.10.0"
         },
         "docopt": {
             "hashes": [
@@ -229,10 +229,10 @@
         },
         "orderedmultidict": {
             "hashes": [
-                "sha256:24e3b730cf84e4a6a68be5cc760864905cf66abc89851e724bd5b4e849eaa96b",
-                "sha256:b89895ba6438038d0bdf88020ceff876cf3eae0d5c66a69b526fab31125db2c5"
+                "sha256:04070bbb5e87291cc9bfa51df413677faf2141c73c61d2a5f7b26bea3cd882ad",
+                "sha256:43c839a17ee3cdd62234c47deca1a8508a3f2ca1d0678a3bf791c87cf84adbf3"
             ],
-            "version": "==1.0"
+            "version": "==1.0.1"
         },
         "packaging": {
             "hashes": [
