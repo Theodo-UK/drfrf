@@ -28,7 +28,7 @@
     "babel-polyfill": "^6.23.0",
     "babel-preset-stage-2": "^6.24.1",
     "img-loader": "^3.0.1",
-    "standard": "^13.0.2",
+    "standard": "^13.1.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.6",
