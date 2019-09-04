@@ -169,10 +169,10 @@
         },
         "green": {
             "hashes": [
-                "sha256:61b50ed3826517424b2260e27da84967e51c3abdb3bd0d7b821b7518712a4d94"
+                "sha256:9b9588f7a5a79302dc00f5a6a62554d44d8363c72cb2adb364e50aa0017e8e9d"
             ],
             "index": "pypi",
-            "version": "==2.16.1"
+            "version": "==3.0.0"
         },
         "idna": {
             "hashes": [
